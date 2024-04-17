@@ -10,75 +10,61 @@ const MenuLeft = () => {
     <>
       <div className="menuleft-container">
         <div className="menuleft-item-container-head">
-          <a>BROWSE</a>
+          <a className="nothing">BROWSE</a>
         </div>
         <div className="menuleft-item-container">
           <Link className="anchor" to="/newrelease">
             <span>
               <MdNewReleases />
-            </span>{" "}
-            New Release
+            </span>
+            <a className="nothing">New Release</a>
           </Link>
         </div>
         <div className="menuleft-item-container">
-          <a>
-            <span>
-              <FaChartLine />
-            </span>{" "}
-            Top charts
-          </a>
+          <span>
+            <FaChartLine />
+          </span>
+          <a className="nothing">Top charts</a>
         </div>
         <div className="menuleft-item-container">
-          <a>
-            <span>
-              <MdFeaturedPlayList />
-            </span>{" "}
-            Top Playlists
-          </a>
+          <span>
+            <MdFeaturedPlayList />
+          </span>
+          <a className="nothing">Top Playlists</a>
         </div>
         <div className="menuleft-item-container">
-          <a>
-            <span>
-              <IoIosMicrophone />
-            </span>{" "}
-            Top Artists
-          </a>
+          <span>
+            <IoIosMicrophone />
+          </span>
+          <a className="nothing">Top Artists</a>
         </div>
 
         <div className="menuleft-item-container-head">
-          <a>LIBRARY</a>
+          <a className="nothing">LIBRARY</a>
         </div>
         <div className="menuleft-item-container">
-          <a>
-            <span>
-              <FaHistory />
-            </span>{" "}
-            History
-          </a>
+          <span>
+            <FaHistory />
+          </span>
+          <a className="nothing">History</a>
         </div>
         <div className="menuleft-item-container">
-          <a>
-            <span>
-              <FaLink />
-            </span>{" "}
-            Linked Songs
-          </a>
+          <span>
+            <FaLink />
+          </span>
+          <a className="nothing">Linked Songs</a>
         </div>
         <div className="menuleft-item-container">
-          <a>
-            <span>
-              <BiSolidPhotoAlbum />
-            </span>{" "}
-            Albums
-          </a>
+          <span>
+            <BiSolidPhotoAlbum />
+          </span>
+          <a className="nothing">Albums</a>
         </div>
         <div className="menuleft-item-container">
-          <a>
-            <span>
-              <BiSolidPlaylist />
-            </span>{" "}
-            Custom Playlists
-          </a>
+          <span>
+            <BiSolidPlaylist />
+          </span>
+          <a className="nothing">Custom Playlists</a>
         </div>
       </div>
     </>

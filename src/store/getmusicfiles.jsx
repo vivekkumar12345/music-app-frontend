@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchsong = createAsyncThunk("fetchsongs", async () => {
   try {
-    const response = await axios.get("http://localhost:8081/fetchsong");
+    const response = await axios.get("http://65.0.198.191:8081/fetchsong");
     return response.data;
   } catch (error) {
     return error;

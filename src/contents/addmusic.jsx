@@ -43,7 +43,7 @@ const AddMusic = () => {
     formdata.append("fileupload", posterUpload.current.files[0]);
 
     axios
-      .post("http://localhost:8081/addmusic", formdata)
+      .post("http://65.0.198.191:8081/addmusic", formdata)
       .then((res) => {
         console.log(res);
       })

@@ -14,7 +14,7 @@ const SongCard = (props) => {
         onClick={() =>
           dispatch(
             play({
-              link: `http://localhost:8081/uploads/${props.data.music_link}`,
+              link: `http://65.0.198.191:8081/uploads/${props.data.music_link}`,
             })
           )
         }
@@ -22,7 +22,7 @@ const SongCard = (props) => {
         <div
           className="songcard-inner-container"
           style={{
-            backgroundImage: `url(http://localhost:8081/uploads/${props.data.music_photo_link})`,
+            backgroundImage: `url(http://65.0.198.191:8081/uploads/${props.data.music_photo_link})`,
           }}
         >
           <div className="songcard-playscreen"></div>

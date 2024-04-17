@@ -72,3 +72,23 @@ input[type=range]:focus {
 input[type=range]:focus::-webkit-slider-runnable-track {
     background: #ccc;
 }
+
+@media only screen and (max-width: 800px)  {
+    .header{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 2vh;
+    }
+    .header a{
+        padding-left:20px;
+        width: 20%;
+        font-size: 2vh;
+    }
+    .progress-bar{
+        margin-left:20px !important;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 150px !important;
+    }
+}
