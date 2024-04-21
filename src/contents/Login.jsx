@@ -25,8 +25,6 @@ const Login = () => {
           <input
             id="signInFormUsername"
             className={styles.inputform}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             type="text"
             name="username"
             placeholder="Username"
@@ -34,8 +32,6 @@ const Login = () => {
           <input
             id="signInFormPassword"
             className={styles.inputform}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
             type="text"
             name="password"
             placeholder="Password"
