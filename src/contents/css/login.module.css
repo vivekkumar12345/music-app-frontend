@@ -1,0 +1,43 @@
+.loginContainer{
+    height:80vh;
+    width: 40%;
+    margin: auto;
+    margin-top:7vh;
+    background-color: white;
+    box-shadow: 0 0 5vh rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 8vh;
+    padding-top: 2vh;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+body{
+    background-color: rgba(246, 246, 246, 0.89);
+  
+    
+}
+p{
+    font-size: 4vh;
+    color: blue;
+    font-family: 'Brush Script MT',cursive;
+}
+.inputform, .signinbtn{
+    margin-top: 1vh;
+    height: 7vh;
+    width: 80%;
+    font-size: 2vh;
+    border:none;
+    border-bottom: .3vh solid lightgray;
+    outline: none;
+}
+.inputform:hover{
+    border-bottom: .3vh solid rgb(29, 36, 255);
+}
+.signinbtn{
+   border:none;
+   background-color: blue;
+   color: white;
+   font-family: 'Brush Script MT',cursive;
+   font-size: 3vh;
+   margin-bottom: 2vh;
+}

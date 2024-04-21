@@ -15,17 +15,19 @@ import Header from "./contents/header.jsx";
 import MenuLeft from "./contents/menuleft.jsx";
 import AddMusic from "./contents/addmusic.jsx";
 import NewRelease from "./contents/newrelease.jsx";
+import Login from "./contents/Login.jsx";
 import { Provider } from "react-redux";
 import { store } from "./store/store.jsx";
 
 const router = createBrowserRouter([
+  { path: "/", element: <Login /> },
   {
-    path: "/",
+    path: "/app",
     element: <App />,
     children: [
-      { path: "/", element: <BodyRight /> },
-      { path: "/add", element: <AddMusic /> },
-      { path: "/newrelease", element: <NewRelease /> },
+      { path: "/app", element: <BodyRight /> },
+      { path: "/app/add", element: <AddMusic /> },
+      { path: "/app/newrelease", element: <NewRelease /> },
     ],
   },
 ]);

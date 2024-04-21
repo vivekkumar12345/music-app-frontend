@@ -26,9 +26,9 @@ const Header = () => {
           </a>
           <a>
             {music.play && music.music != "" ? (
-              <FaPlay onClick={playPause} style={{ fontSize: "3.5vh" }} />
-            ) : (
               <FaPause onClick={playPause} style={{ fontSize: "3.5vh" }} />
+            ) : (
+              <FaPlay onClick={playPause} style={{ fontSize: "3.5vh" }} />
             )}
           </a>
           <a>
