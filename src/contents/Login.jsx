@@ -4,62 +4,6 @@ import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
 
 const Login = () => {
-  function getAdvancedSecurityData(formReference) {
-    if (typeof AmazonCognitoAdvancedSecurityData === "undefined") {
-      return true;
-    }
-
-    // UserpoolId is not available on frontend for springboard. We do not use userPoolId
-    // anyway other than put in context data.
-    var userPoolId = "";
-    var clientId = getUrlParameter("client_id");
-
-    var username = "";
-    var usernameInput = document.getElementsByName("username")[0];
-    if (usernameInput && usernameInput.value) {
-      username = usernameInput.value;
-    }
-
-    var asfData = AmazonCognitoAdvancedSecurityData.getData(
-      username,
-      userPoolId,
-      clientId
-    );
-    if (typeof asfData === "undefined") {
-      return true;
-    }
-
-    if (formReference && formReference.cognitoAsfData) {
-      formReference.cognitoAsfData.value = asfData;
-    }
-
-    return true;
-  }
-
-  function getUrlParameter(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-    var results = regex.exec(location.search);
-    return results === null
-      ? ""
-      : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-
-  function onSubmit(evt, formRef) {
-    formRef.querySelector('button[type="submit"]').disabled = true;
-    if (!!formRef.submitted) {
-      evt.preventDefault();
-      return false;
-    } else {
-      formRef.submitted = true;
-      return getAdvancedSecurityData(formRef);
-    }
-  }
-
-  function onSubmitLoginForm(formRef) {
-    formRef.querySelector('input[name="signInSubmitButton"]').disabled = true;
-    getAdvancedSecurityData(formRef);
-  }
   return (
     <>
       <head>
@@ -71,7 +15,6 @@ const Login = () => {
         <form
           name="cognitoSignInForm"
           method="POST"
-          onSubmit={onSubmitLoginForm(this)}
           action="https://fishfarm.auth.ap-south-1.amazoncognito.com/login?client_id=20l9bqm5tm5nfn241vope0t7fj&amp;response_type=token&amp;scope=email+openid+phone&amp;redirect_uri=https%3A%2F%2F65.0.198.191%2Fapp"
         >
           <input
